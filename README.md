@@ -1,2 +1,2 @@
 # Usage
-python mac_changer.py -i <ur-interface> -m <ur-mac-adress>
+python mac_changer.py -i "ur-interface" -m "ur-mac-adress"
