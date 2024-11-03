@@ -1,6 +1,6 @@
 # Setup
 ```bash
-https://github.com/atphosphate/MacChanger.git
+git clone https://github.com/atphosphate/MacChanger.git
 ```
 # Usage
 ```bash
