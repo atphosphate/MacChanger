@@ -36,11 +36,6 @@ This tool is for **educational purposes only**. Unauthorized use of this tool to
    sudo su
    ```
 
-3. Run the script:
-   ```bash
-   python macchanger.py
-   ```
-
 ---
 
 ## 📂 File Structure
@@ -60,36 +55,19 @@ This tool is for **educational purposes only**. Unauthorized use of this tool to
 ---
 
 ## 📖 Usage
-Run the script with administrative privileges to change your MAC address.  
+Run the script with administrative privileges to change your MAC address. 
 
-1. View available interfaces:
    ```bash
-   python macchanger.py --list
-   ```
-
-2. Set a custom MAC address:
-   ```bash
-   python macchanger.py --interface eth0 --mac 00:11:22:33:44:55
-   ```
-
-3. Generate and set a random MAC address:
-   ```bash
-   python macchanger.py --interface wlan0 --random
-   ```
-
-4. Restore the original MAC address:
-   ```bash
-   python macchanger.py --interface eth0 --restore
+   sudo python mac_changer.py -i <interface> -m <new-mac-address>
    ```
 
 ---
 
 ## 🔍 Example
 ```bash
-$ sudo python macchanger.py --interface eth0 --random
-[*] Changing MAC address for eth0
-[*] Original MAC: 00:1A:2B:3C:4D:5E
-[*] New MAC: A2:B3:C4:D5:E6:F7
+$ sudo python mac_changer.py --interface eth0 --mac_address 10:10:10:10:10:10
+[*] MacChanger has started
+[*] Succsess!
 ```
 
 ---
