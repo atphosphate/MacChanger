@@ -5,7 +5,7 @@ import re
 def get_info():
     parse_object = optparse.OptionParser()
     parse_object.add_option("-i","--interface", dest="interface", help="interface to change")
-    parse_object.add_option("-m","--mac", dest="mac_adress", help="new mac adress")
+    parse_object.add_option("-m","--mac", dest="mac_address", help="new mac address")
     return parse_object.parse_args()
 
 def control_new_mac(interface):
@@ -17,18 +17,18 @@ def control_new_mac(interface):
     else:
         return None
 
-def change_mac(user_interface, user_mac_adress):
+def change_mac(user_interface, user_mac_address):
     subprocess.call(["ifconfig", user_interface, "down"])
-    subprocess.call(["ifconfig", user_interface, "hw", "ether", user_mac_adress])
+    subprocess.call(["ifconfig", user_interface, "hw", "ether", user_mac_address])
     subprocess.call(["ifconfig", user_interface, "up"])
 
 print("MacChanger has started")
 
 (user_input, arguments) = get_info()
-change_mac(user_input.interface, user_input.mac_adress)
+change_mac(user_input.interface, user_input.mac_address)
 finalized_mac = control_new_mac(user_input.interface)
 
-if finalized_mac == user_input.mac_adress:
+if finalized_mac == user_input.mac_address:
     print("Success!")
 else:
     print("Error!")
